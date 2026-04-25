@@ -1,0 +1,318 @@
+/* BASE STYLES */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --bg-main: #0D0D0D;
+  --bg-main-hover: #1f1e1e;
+  --bg-surface: #262626;
+  --bg-surface-hover: #333131;
+  --bg-overlay: #323535;
+  --bg-overlay-hover: #3e4242;
+  --bg-subtle: #98A6A1;
+  --bg-subtle-hover: #a6b6b0;
+  --bg-contrast: #D5D9CC;
+  --bg-contrast-hover: #edf0e5;
+
+  --text-main: #ECECEC;
+  --text-surface: #AEABAB;
+  --text-overlay: #626365;
+  --text-subtle: #424345;
+  --text-contrast: #1B1C1D;
+
+  --accent-primary: #342f94;
+  --accent-primary-hover: #3934a3;
+
+  --font-body: "Poppins";
+  --font-heading: "Poppins";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text-main);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background-color: var(--accent-primary-hover);
+  color: var(--text-main);
+}
+
+html,
+body {
+  min-height: 100dvh;
+  background-color: var(--bg-main);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+section {
+  min-width: 300px;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+
+
+/* NAVBAR STYLES */
+nav[class^='g-navbar-'] {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 300px;
+  padding: .5rem 1rem;
+}
+
+nav[class^='g-navbar-']:has(.g-navbar-input:checked) {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.g-navbar-hero {
+  background-color: #2F2E41;
+}
+
+.g-navbar-main {
+  background-color: var(--bg-main);
+}
+
+.g-navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  background-color: var(--bg-contrast);
+  cursor: pointer;
+  user-select: none;
+}
+
+.g-navbar-logo a {
+  color: var(--text-contrast);
+  font-weight: 500;
+  font-family: "Montserrat Alternates";
+  font-size: .9rem;
+  text-decoration: none;
+}
+
+.g-navbar-input {
+  display: none;
+}
+
+.g-navbar-label {
+  cursor: pointer;
+}
+
+.g-navbar-label,
+.g-navbar-label span,
+.g-navbar-label span svg {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+
+.g-navbar-label .g-navbar-menu-closed {
+  display: none;
+}
+
+.g-navbar-links {
+  display: none;
+}
+
+body:has(.g-navbar-input:checked),
+html:has(.g-navbar-input:checked) {
+  overflow: hidden;
+}
+
+.g-navbar-input:checked+.g-navbar-label .g-navbar-menu-opened {
+  display: none;
+}
+
+.g-navbar-input:checked+.g-navbar-label .g-navbar-menu-closed {
+  display: block;
+}
+
+.g-navbar-input:checked~.g-navbar-links {
+  display: block;
+  position: fixed;
+  top: calc(1rem + 40px);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background-color: inherit;
+}
+
+.g-navbar-links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  padding-top: 1.5rem;
+  list-style: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.g-navbar-links ul li {
+  width: 100%;
+  padding: .5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: inherit;
+  white-space: nowrap;
+}
+
+.g-navbar-hero .g-navbar-links ul li:hover,
+.g-navbar-hero .g-navbar-links ul li:focus {
+  background-color: #3a3855;
+}
+
+.g-navbar-main .g-navbar-links ul li:hover,
+.g-navbar-main .g-navbar-links ul li:focus {
+  background-color: var(--bg-main-hover);
+}
+
+.g-navbar-links ul li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text-main);
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 720px) {
+  .g-navbar-label {
+    display: none;
+  }
+
+  .g-navbar-links {
+    position: relative;
+    display: block;
+  }
+
+  .g-navbar-links ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .g-navbar-links ul li a {
+    font-size: 1rem;
+  }
+}
+
+
+
+/* BUTTON STYLES */
+button[class^='g-button-'],
+a[class^='g-button-'] {
+  display: inline-block;
+  border-radius: 10px;
+  padding: .3rem .8rem;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+.g-button-primary {
+  border: 2px solid var(--accent-primary);
+  background-color: var(--accent-primary);
+}
+
+.g-button-primary:hover {
+  border: 2px solid var(--accent-primary-hover);
+  background-color: var(--accent-primary-hover);
+}
+
+.g-button-contrast {
+  border: 2px solid var(--bg-contrast);
+  background-color: var(--bg-contrast);
+  color: var(--text-contrast);
+}
+
+.g-button-contrast:hover {
+  border: 2px solid var(--bg-contrast-hover);
+  background-color: var(--bg-contrast-hover);
+  color: var(--text-contrast);
+}
+
+.g-button-contrast-ghost {
+  border: 2px solid var(--bg-contrast);
+  background-color: transparent;
+  color: var(--text-main);
+}
+
+.g-button-contrast-ghost:hover {
+  border: 2px solid var(--bg-contrast-hover);
+  background-color: transparent;
+  color: var(--text-main);
+}
+
+
+
+/* SVG ICONS STYLES */
+.g-svg-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  padding: .2rem;
+  overflow: hidden;
+  background-color: #242938;
+}
+
+
+
+/* FOOTER STYLES */
+footer[class^="g-footer-"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem;
+}
+
+footer[class^="g-footer-"] * {
+  font-weight: 500;
+}
+
+footer[class^="g-footer-"] a {
+  text-decoration: none;
+  color: var(--accent-primary);
+  font-weight: bold;
+}
+
+footer[class^="g-footer-"] a:hover {
+  color: var(--accent-primary-hover);
+}
+
+.g-footer-hero {
+  background-color: var(--bg-contrast);
+}
+
+.g-footer-hero * {
+  color: var(--text-contrast);
+}
+
+.g-footer-main {
+  background-color: var(--bg-main);
+}
+
+.g-footer-main * {
+  color: var(--text-main);
+}

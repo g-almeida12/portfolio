@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabriel Almeida</title>
+
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/contact.css">
+
+  <script src="../js/global.js" defer type="module"></script>
+  <script src="../js/contact.js" defer type="module"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="g-navbar-main">
+      <div class="g-navbar-logo">
+        <a href="/index.html">G. Al</a>
+      </div>
+
+      <input type="checkbox" id="navbar-checkbox" class="g-navbar-input" aria-hidden="true">
+      <label for="navbar-checkbox" class="g-navbar-label">
+        <span class="g-navbar-menu-opened">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-menu-icon lucide-menu">
+            <path d="M4 5h16" />
+            <path d="M4 12h16" />
+            <path d="M4 19h16" />
+          </svg>
+        </span>
+
+        <span class="g-navbar-menu-closed">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-x-icon lucide-x">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="g-navbar-links">
+        <ul>
+          <li>
+            <a href="/index.html#about-me">Sobre mim</a>
+          </li>
+          <li>
+            <a href="/index.html#projects">Meus projetos</a>
+          </li>
+          <li>
+            <a href="/index.html#technologies">Tecnologias</a>
+          </li>
+          <li>
+            <a href="/pages/contact.html">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <dialog id="modal">
+      <h2>Ops! Parece que algo falhou</h2>
+      <p>Sua mensagem não pôde ser enviada. Que tal tentar de novo ou me chamar pelo Instagram?</p>
+      <div class="modal__btns">
+        <a href="https://www.instagram.com//g_almeida17" target="_blank" class="g-button-contrast"
+          id="go-to-hero">Instagram</a>
+        <button class="g-button-contrast-ghost" id="close-modal">
+          Tentar reenviar email
+        </button>
+      </div>
+    </dialog>
+
+    <section class="contact">
+      <h1>Vamos tirar seu projeto do papel e construir algo incrível?</h1>
+      <p>Não espere a hora certa de começar, crie ela você mesmo.</p>
+
+      <form action="https://formsubmit.co/ajax/a35b04938eca03538415eb9d64f28326" method="POST" id="contact-form">
+        <!-- Contact inputs -->
+        <input type="text" name="name" minlength="2" autocomplete="name" placeholder="Nome" required>
+        <input type="email" name="email" minlength="2" autocomplete="email" placeholder="Email" required>
+        <input type="text" name="_subject" minlength="2" autocomplete="off" placeholder="Assunto" required>
+        <textarea name="message" minlength="2" autocomplete="off" placeholder="Mensagem" required></textarea>
+
+        <!-- FormSubmit's features -->
+        <input type="hidden" name="_language" value="pt-BR">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" tabindex="-1" aria-hidden="true">
+
+        <div>
+          <button type="submit" class="g-button-primary" id="form-submit">Vamos conversar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="g-footer-main">
+    <p>
+      <small>Desenvolvido por
+        <a href="https://www.instagram.com//g_almeida17" target="_blank" rel="noopener">Gabriel Almeida</a>
+      </small>
+    </p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+.thank-you {
+  padding: 1rem;
+  padding-top: 5rem;
+}
+
+.thank-you * {
+  text-align: center;
+}
+
+.thank-you__img img {
+  width: 50%;
+}
+
+.thank-you h1 {
+  margin-top: 2rem;
+  line-height: 2.2rem;
+  font-weight: 500;
+}
+
+.thank-you p {
+  margin-top: .5rem;
+  color: var(--text-surface);
+}
+
+.thank-you__btn {
+  margin-top: 3rem;
+}

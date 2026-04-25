@@ -1,0 +1,114 @@
+/* CONTACT STYLES */
+.contact {
+  padding-inline: 1rem;
+  padding-block: 3rem;
+}
+
+.contact h1 {
+  font-weight: 500;
+  line-height: 2.2rem;
+  text-align: center;
+}
+
+.contact p {
+  margin-top: 1rem;
+  color: var(--text-surface);
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.contact form input,
+.contact form textarea {
+  display: inline-block;
+  width: 100%;
+  border: 2px solid var(--bg-surface);
+  padding: .4rem .5rem;
+  outline: none;
+  border-radius: 10px;
+  background-color: var(--bg-surface);
+  font-size: 1rem;
+  transition: border .1s ease-in;
+}
+
+.contact form textarea {
+  resize: none;
+  height: 100px;
+}
+
+.contact form input[name="_honey"] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  z-index: 0;
+}
+
+.contact form input:hover,
+.contact form textarea:hover {
+  border: 2px solid var(--bg-subtle);
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+  border: 2px solid var(--bg-subtle);
+  background-color: var(--bg-subtle);
+  color: var(--text-contrast);
+}
+
+.contact form div {
+  margin-top: 1.5rem;
+}
+
+
+
+/* DIALOG STYLES */
+dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 2rem);
+  max-width: 400px;
+  border: none;
+  padding: .5rem;
+  border-radius: 10px;
+  background-color: var(--bg-surface);
+}
+
+dialog * {
+  text-align: center;
+}
+
+dialog h2 {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+dialog p {
+  color: var(--text-surface);
+}
+
+dialog .modal__btns {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin-top: 2rem;
+}
+
+dialog .modal__btns > * {
+  width: 100%;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, .8);
+}
