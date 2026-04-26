@@ -66,9 +66,8 @@
       <h2>Ops! Parece que algo falhou</h2>
       <p>Sua mensagem não pôde ser enviada. Que tal tentar de novo ou me chamar pelo Instagram?</p>
       <div class="modal__btns">
-        <a href="https://www.instagram.com//g_almeida17" target="_blank" class="g-button-contrast"
-          id="go-to-hero">Instagram</a>
-        <button class="g-button-contrast-ghost" id="close-modal">
+        <a href="https://www.instagram.com//g_almeida17" target="_blank" class="g-button-contrast close-modal">Instagram</a>
+        <button class="g-button-contrast-ghost close-modal">
           Tentar reenviar email
         </button>
       </div>
@@ -78,22 +77,88 @@
       <h1>Vamos tirar seu projeto do papel e construir algo incrível?</h1>
       <p>Não espere a hora certa de começar, crie ela você mesmo.</p>
 
-      <form action="https://formsubmit.co/ajax/a35b04938eca03538415eb9d64f28326" method="POST" id="contact-form">
-        <!-- Contact inputs -->
-        <input type="text" name="name" minlength="2" autocomplete="name" placeholder="Nome" required>
-        <input type="email" name="email" minlength="2" autocomplete="email" placeholder="Email" required>
-        <input type="text" name="_subject" minlength="2" autocomplete="off" placeholder="Assunto" required>
-        <textarea name="message" minlength="2" autocomplete="off" placeholder="Mensagem" required></textarea>
+      <div>
+        <form action="https://formsubmit.co/ajax/a35b04938eca03538415eb9d64f28326" method="POST" id="contact-form">
+          <!-- Contact inputs -->
+          <div class="form__input-container">
+            <label for="name">
+              <span class="g-svg-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-circle-user-round-icon lucide-circle-user-round">
+                  <path d="M17.925 20.056a6 6 0 0 0-11.851.001" />
+                  <circle cx="12" cy="11" r="4" />
+                  <circle cx="12" cy="12" r="10" />
+                </svg>
+              </span>
+              Nome
+            </label>
+            <input type="text" name="name" id="name" minlength="2" autocomplete="name" required>
+          </div>
 
-        <!-- FormSubmit's features -->
-        <input type="hidden" name="_language" value="pt-BR">
-        <input type="hidden" name="_template" value="table">
-        <input type="text" name="_honey" tabindex="-1" aria-hidden="true">
+          <div class="form__input-container">
+            <label for="email">
+              <span class="g-svg-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-mail-icon lucide-mail">
+                  <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                </svg>
+              </span>
+              Email
+            </label>
+            <input type="email" name="email" id="email" minlength="2" autocomplete="email" required>
+          </div>
 
-        <div>
-          <button type="submit" class="g-button-primary" id="form-submit">Vamos conversar</button>
+          <div class="form__input-container">
+            <label for="subject">
+              <span class="g-svg-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-square-pen-icon lucide-square-pen">
+                  <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                  <path
+                    d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z" />
+                </svg>
+              </span>
+              Assunto
+            </label>
+            <input type="text" name="_subject" minlength="2" autocomplete="off" required>
+          </div>
+
+          <div class="form__input-container">
+            <label for="message">
+              <span class="g-svg-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-message-square-text-icon lucide-message-square-text">
+                  <path
+                    d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" />
+                  <path d="M7 11h10" />
+                  <path d="M7 15h6" />
+                  <path d="M7 7h8" />
+                </svg>
+              </span>
+              Mensagem
+            </label>
+            <textarea name="message" id="message" minlength="2" autocomplete="off" required></textarea>
+          </div>
+
+          <!-- FormSubmit's features -->
+          <input type="hidden" name="_language" value="pt-BR">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" tabindex="-1" aria-hidden="true">
+
+          <div class="form__submit">
+            <button type="submit" class="g-button-primary" id="form-submit">Vamos conversar</button>
+          </div>
+        </form>
+
+        <div class="contact__img">
+          <img src="../images/email-img.png" alt="Troca de mensagens" loading="lazy">
         </div>
-      </form>
+      </div>
     </section>
   </main>
 

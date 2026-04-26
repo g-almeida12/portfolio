@@ -1,5 +1,5 @@
 function handleNavbarLinkClick() {
-  document.getElementById("navbar-checkbox").click();
+  document.getElementById("navbar-checkbox").checked = false;
 }
 
 document

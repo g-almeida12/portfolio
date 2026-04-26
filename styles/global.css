@@ -41,10 +41,16 @@
 
 html,
 body {
+  position: relative;
   min-height: 100dvh;
   background-color: var(--bg-main);
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+
+main {
+  height: 100%;
+  padding-bottom: 40px;
 }
 
 section {
@@ -54,6 +60,14 @@ section {
 img {
   user-select: none;
   -webkit-user-drag: none;
+}
+
+@media screen and (min-width: 1080px) {
+
+  html,
+  body {
+    font-size: 18px;
+  }
 }
 
 
@@ -164,7 +178,6 @@ html:has(.g-navbar-input:checked) {
 
 .g-navbar-links ul li {
   width: 100%;
-  padding: .5rem;
   border-radius: 10px;
   cursor: pointer;
   background-color: inherit;
@@ -185,6 +198,7 @@ html:has(.g-navbar-input:checked) {
   display: inline-block;
   width: 100%;
   height: 100%;
+  padding: .5rem;
   text-decoration: none;
   font-weight: 500;
   color: var(--text-main);
@@ -209,6 +223,13 @@ html:has(.g-navbar-input:checked) {
 
   .g-navbar-links ul li a {
     font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .g-navbar-logo {
+    height: 45px;
+    width: 45px;
   }
 }
 
@@ -269,18 +290,26 @@ a[class^='g-button-'] {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
   border-radius: 5px;
   padding: .2rem;
   overflow: hidden;
   background-color: #242938;
 }
 
+.g-svg-icon svg {
+  width: 26px;
+}
+
 
 
 /* FOOTER STYLES */
 footer[class^="g-footer-"] {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
