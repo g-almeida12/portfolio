@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página não encontrada</title>
+
+  <link rel="stylesheet" href="./styles/global.css">
+  <link rel="stylesheet" href="./styles/404.css">
+</head>
+
+<body>
+  <header>
+    <nav class="g-navbar-main">
+      <div class="g-navbar-logo">
+        <a href="/">G. Al</a>
+      </div>
+
+      <input type="checkbox" id="navbar-checkbox" class="g-navbar-input" aria-hidden="true">
+      <label for="navbar-checkbox" class="g-navbar-label">
+        <span class="g-navbar-menu-opened">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-menu-icon lucide-menu">
+            <path d="M4 5h16" />
+            <path d="M4 12h16" />
+            <path d="M4 19h16" />
+          </svg>
+        </span>
+
+        <span class="g-navbar-menu-closed">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-x-icon lucide-x">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="g-navbar-links">
+        <ul>
+          <li>
+            <a href="/#about-me">Sobre mim</a>
+          </li>
+          <li>
+            <a href="/#projects">Meus projetos</a>
+          </li>
+          <li>
+            <a href="/#technologies">Tecnologias</a>
+          </li>
+          <li>
+            <a href="/pages/contact.html">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="not-found">
+      <h1 aria-describedby="page-not-found">404</h1>
+      <h2 id="page-not-found">Página não encontrada</h2>
+      <div class="not-found__img">
+        <img src="./images/not-found-img.svg" alt="Ilustração de página não encontrada" loading="lazy">
+      </div>
+
+
+      <div class="not-found__msg-container">
+        <p class="not-found__msg">Ah, não! Nenhum sinal de vida aqui.</p>
+        <p>Talvez a página não exista mais, ou tenha sido movida permanentemente.</p>
+
+        <div class="not-found__btn">
+          <a href="/" class="g-button-contrast">Voltar para o início</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

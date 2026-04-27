@@ -7,13 +7,12 @@ async function handleFormSubmit(e) {
 
   try {
     const form = document.getElementById("contact-form");
-    /*    const response = await fetch(form.action, {
+    const response = await fetch(form.action, {
       method: "POST",
       body: new FormData(form),
       headers: { Accept: "application/json" },
-    }); */
-    // TODO: mudar em deploy
-    if (true) {
+    });
+    if (!response.ok) {
       throw new Error("Server error");
     }
 
