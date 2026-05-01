@@ -46,14 +46,14 @@
 
       <div class="g-navbar-links">
         <ul>
-          <li>
-            <a href="/#about-me">Sobre mim</a>
+          <li data-target-id="about-me">
+            <a href="/">Sobre mim</a>
           </li>
-          <li>
-            <a href="/#projects">Meus projetos</a>
+          <li data-target-id="projects">
+            <a href="/">Meus projetos</a>
           </li>
-          <li>
-            <a href="/#technologies">Tecnologias</a>
+          <li data-target-id="technologies">
+            <a href="/">Tecnologias</a>
           </li>
           <li>
             <a href="/pages/contact.html">Contato</a>
@@ -76,7 +76,7 @@
       </div>
     </dialog>
 
-    <section class="contact">
+    <section class="contact" id="contact-section">
       <h1>Vamos tirar seu projeto do papel e construir algo incrível?</h1>
       <p>Não espere a hora certa de começar, crie ela você mesmo.</p>
 
@@ -127,7 +127,7 @@
               </span>
               Assunto
             </label>
-            <input type="text" name="_subject" minlength="2" autocomplete="off" required>
+            <input type="text" name="_subject" id="subject" minlength="2" autocomplete="off" required>
           </div>
 
           <div class="form__input-container">

@@ -248,6 +248,11 @@
   user-select: none;
 }
 
+.technology__items .g-svg-icon {
+  background-color: #12141d;
+  border-radius: 5px 0 0 5px;
+}
+
 .technology__items div span:nth-child(2) {
   display: flex;
   align-items: center;
