@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gabriel Almeida</title>
 
+  <link rel="icon" type="image/png" href="/favicon.png">
+
   <link rel="stylesheet" href="../styles/global.css">
   <link rel="stylesheet" href="../styles/contact.css">
 
@@ -17,12 +19,12 @@
   <header>
     <nav class="g-navbar-main">
       <div class="g-navbar-logo">
-        <a href="/">G. Al</a>
+        <a href="/" aria-label="Página inicial">G. Al</a>
       </div>
 
       <input type="checkbox" id="navbar-checkbox" class="g-navbar-input" aria-hidden="true">
-      <label for="navbar-checkbox" class="g-navbar-label">
-        <span class="g-navbar-menu-opened">
+      <label for="navbar-checkbox" class="g-navbar-label"  id="menu-button" aria-label="Abrir menu de navegação">
+        <span class="g-navbar-menu-opened" aria-hidden="true">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="lucide lucide-menu-icon lucide-menu">
@@ -32,7 +34,7 @@
           </svg>
         </span>
 
-        <span class="g-navbar-menu-closed">
+        <span class="g-navbar-menu-closed" aria-hidden="true">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="lucide lucide-x-icon lucide-x">
@@ -83,7 +85,7 @@
           <!-- Contact inputs -->
           <div class="form__input-container">
             <label for="name">
-              <span class="g-svg-icon">
+              <span class="g-svg-icon" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="lucide lucide-circle-user-round-icon lucide-circle-user-round">
@@ -99,7 +101,7 @@
 
           <div class="form__input-container">
             <label for="email">
-              <span class="g-svg-icon">
+              <span class="g-svg-icon" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="lucide lucide-mail-icon lucide-mail">
@@ -114,7 +116,7 @@
 
           <div class="form__input-container">
             <label for="subject">
-              <span class="g-svg-icon">
+              <span class="g-svg-icon" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="lucide lucide-square-pen-icon lucide-square-pen">
@@ -130,7 +132,7 @@
 
           <div class="form__input-container">
             <label for="message">
-              <span class="g-svg-icon">
+              <span class="g-svg-icon" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="lucide lucide-message-square-text-icon lucide-message-square-text">

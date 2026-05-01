@@ -245,6 +245,7 @@
   border-radius: 5px;
   padding-right: .5rem;
   background-color: var(--bg-surface);
+  user-select: none;
 }
 
 .technology__items div span:nth-child(2) {
