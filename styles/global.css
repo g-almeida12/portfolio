@@ -177,6 +177,7 @@ html:has(.g-navbar-input:checked) {
 }
 
 .g-navbar-links ul li {
+  position: relative;
   width: 100%;
   border-radius: 10px;
   cursor: pointer;
@@ -184,17 +185,27 @@ html:has(.g-navbar-input:checked) {
   white-space: nowrap;
 }
 
-.g-navbar-hero .g-navbar-links ul li:hover,
-.g-navbar-hero .g-navbar-links ul li:focus {
-  background-color: #3a3855;
+.g-navbar-links ul li::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 2px;
+  left: 0;
+  background-color: #d5d9cc;
+  transform-origin: center center;
+  transition: transform 0.25s ease-out;
 }
 
-.g-navbar-main .g-navbar-links ul li:hover,
-.g-navbar-main .g-navbar-links ul li:focus {
-  background-color: var(--bg-main-hover);
+.g-navbar-links ul li:hover::after {
+  transform: scaleX(1);
+  transform-origin: center center;
 }
 
 .g-navbar-links ul li a {
+  position: relative;
+  transition: transform 0.3s ease;
   display: inline-block;
   width: 100%;
   height: 100%;
@@ -203,6 +214,10 @@ html:has(.g-navbar-input:checked) {
   font-weight: 500;
   color: var(--text-main);
   font-size: 1.2rem;
+}
+
+.g-navbar-links ul li:hover a {
+  transform: translateY(-5px);
 }
 
 @media screen and (min-width: 720px) {
@@ -297,7 +312,6 @@ a[class^='g-button-'] {
   overflow: hidden;
   background-color: #242938;
 }
-
 
 
 

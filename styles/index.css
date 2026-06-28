@@ -2,6 +2,7 @@
 .hero {
   padding-inline: 1rem;
   padding-top: 4rem;
+  padding-bottom: 1px;
   background-color: #2F2E41;
 }
 
@@ -34,17 +35,29 @@
   margin-top: 5rem;
 }
 
-.hero__social-medias {
+.hero__social-medias ul {
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: center;
   gap: .5rem;
   margin-top: .5rem;
+  list-style: none;
 }
 
-.hero__social-medias a {
-  padding: .2rem;
+.hero__social-medias ul li {
+  position: relative;
+  height: 37px;
+  aspect-ratio: 1 / 1;
+}
+
+.hero__social-medias ul li a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.hero__social-medias ul li:hover a {
+  transform: translateY(-5px);
 }
 
 .hero__social-medias span {
@@ -58,6 +71,47 @@
 
 .hero__img img {
   width: 100%;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1,
+.hero>p,
+.hero>div,
+.hero__social-medias,
+.hero__img {
+  opacity: 0;
+  animation: fadeInUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero h1 {
+  animation-delay: 0.1s;
+}
+
+.hero>p {
+  animation-delay: 0.3s;
+}
+
+.hero>div {
+  animation-delay: 0.5s;
+}
+
+.hero__social-medias {
+  animation-delay: 0.7s;
+}
+
+.hero__img {
+  animation-delay: 0.9s;
 }
 
 @media screen and (min-width: 1080px) {
@@ -108,6 +162,7 @@
     align-items: center;
     justify-content: space-evenly;
   }
+
   .about-me p {
     max-width: 500px;
   }
@@ -148,6 +203,12 @@
   padding-inline: .5rem;
   padding-bottom: .5rem;
   background-color: var(--bg-overlay);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-container__project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .project-container__project img {
@@ -158,11 +219,15 @@
 
 .project-container__project h3 {
   font-weight: 500;
+  cursor: default;
+  user-select: none;
 }
 
 .project-container__project p {
   color: var(--text-surface);
   font-size: .9rem;
+  cursor: default;
+  user-select: none;
 }
 
 .project__technologies {
@@ -219,6 +284,12 @@
   padding: .5rem;
   border-radius: 10px;
   background-color: var(--bg-overlay);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.technologies-container__technology:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .technologies-container__technology h3 {
