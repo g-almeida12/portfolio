@@ -146,6 +146,7 @@
 .about-me h2 {
   margin-bottom: 1rem;
   font-weight: 500;
+  font-size: 2.1rem;
 }
 
 .about-me p {
@@ -187,6 +188,7 @@
 .projects h2 {
   margin-bottom: 1rem;
   font-weight: 500;
+  font-size: 2.1rem;
 }
 
 .project-container {
@@ -194,11 +196,14 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  max-width: 400px;
   margin-inline: auto;
 }
 
 .project-container__project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 400px;
   border-radius: 10px;
   padding-inline: .5rem;
   padding-bottom: .5rem;
@@ -211,10 +216,15 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.project-container__project img {
+.content__img-container {
+  overflow: hidden;
   width: calc(100% + 1rem);
   margin-left: -.5rem;
   border-radius: 10px 10px 0 0;
+}
+
+.content__img-container img {
+  width: 100%;
 }
 
 .project-container__project h3 {
@@ -252,7 +262,19 @@
 
 @media screen and (min-width: 768px) {
   .projects h2 {
+    margin-bottom: 2rem;
     text-align: center;
+  }
+
+  .project-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    max-width: none;
+  }
+
+  .project-container__project {
+    height: 100%;
   }
 }
 
@@ -267,6 +289,7 @@
 .technologies h2 {
   margin-bottom: 1rem;
   font-weight: 500;
+  font-size: 2.1rem;
 }
 
 .technologies-container {
@@ -379,7 +402,7 @@
 
 .contact h2 {
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 2.3rem;
   line-height: 2.1rem;
 }
 
